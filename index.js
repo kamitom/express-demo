@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.json());
 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 const courses = [{
         id: 1,
@@ -104,7 +104,7 @@ app.delete('/api/courses/:id', (req, res) => {
     const index = courses.indexOf(result);
     courses.splice(index, 1);
 
-    //return the same course
+    //return the deleted object
     res.send(result);
 });
 
