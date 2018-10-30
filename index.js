@@ -38,13 +38,13 @@ app.post('/api/courses', (req, res) => {
         res.status(400).send(result.error.details[0].message);
         return;
     }
-    const course = {
+    const target_course = {
         id: courses.length + 1,
         name: req.body.name_abc
     }
 
-    courses.push(course);
-    res.send(course);
+    courses.push(target_course);
+    res.send(target_course);
 });
 
 
