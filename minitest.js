@@ -1,5 +1,25 @@
+const tomkami = require('tomkami-lib');
+
+const handlerMap = {
+    'CustomMessage_SignUp': require('tomkami-lib'),
+    // 'CustomMessage_ResendCode': require('./handleCustomMessage'),
+    // 'CustomMessage_ForgotPassword': require('./handleCustomMessage'),
+    // 'PreSignUp_SignUp': require('./handlePreSignup'),
+    // 'PostConfirmation_ConfirmSignUp': require('./handleConfirmSignUp'),
+    // 'PostConfirmation_ConfirmForgotPassword': require('./handleConfirmForgetPassword'),
+    // 'PostAuthentication_Authentication': require('./handlePostAuthentation'),
+};
+
+
+console.log(tomkami.my_max(-1,-3,-9,10,101,523,442)); // find max
+
+console.log(tomkami.add(1,3));
+
+console.log(handlerMap.CustomMessage_SignUp.add(10,20));
 
 console.log(process.env.SHELL);
+
+
 
 console.log(process.env.SHELL || 20);
 // console.log(test);

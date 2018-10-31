@@ -1,8 +1,15 @@
+const logger = require('./logger');
+const tom_authen = require('./authentication');
 const Joi = require('joi');
 const express = require('express');
 const app = express();
 
 app.use(express.json());
+
+//create custom middleware
+app.use(logger);
+//second middleware here.
+app.use(tom_authen.test);
 
 const port = process.env.PORT || 3000;
 
